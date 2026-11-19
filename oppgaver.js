@@ -49,6 +49,11 @@ function celsiusTilFahrenheit(celsius) {
 //     Returner summen av alle tallene i en array. Bruk en for-løkke.
 function sum(tall) {
   // LØSNING
+  let total = 0;
+  for(i = 0; i < tall.length; i++) {
+  total = total + tall[i]
+  }
+  return total
 }
 
 // Oppgave 5: Returner gjennomsnittet av tallene. Gjenbruk sum()!
