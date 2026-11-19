@@ -50,7 +50,7 @@ function celsiusTilFahrenheit(celsius) {
 function sum(tall) {
   // LØSNING
   let total = 0;
-  for(i = 0; i < tall.length; i++) {
+  for(let i = 0; i < tall.length; i++) {
   total = total + tall[i]
   }
   return total
@@ -67,6 +67,12 @@ function gjennomsnitt(tall) {
 //     Returner HVOR MANGE tall som er under 0. Bruk for-løkke + if.
 function antallUnderNull(tall) {
   // LØSNING
+  let total = 0
+  for (let i = 0; i < tall.length; i++) {
+  if (tall[i] < 0) {
+    total++
+  }}
+  return total;
 }
 
 
@@ -76,6 +82,11 @@ function antallUnderNull(tall) {
 //     Returner det største tallet i arrayen – UTEN Math.max og UTEN .sort()
 function storste(tall) {
   // LØSNING
+  let maks = 0;
+  for (let i = 0; i < tall.length; i++) {
+    if (tall[i] > maks) {maks = tall[i]}
+  }
+  return maks
 }
 
 // Oppgave 8: Returner en NY array med bare kuldegradene (tall under 0).
