@@ -59,7 +59,9 @@ function sum(tall) {
 // Oppgave 5: Returner gjennomsnittet av tallene. Gjenbruk sum()!
 function gjennomsnitt(tall) {
   // LØSNING
-}
+  gjennomsnitt = sum(tall) / tall.length;
+  return gjennomsnitt
+} 
 
 // Oppgave 6: Hvor mange dager med kuldegrader var det? (Trenger du vinterdekk?)
 //     Returner HVOR MANGE tall som er under 0. Bruk for-løkke + if.
