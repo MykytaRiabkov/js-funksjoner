@@ -106,6 +106,19 @@ return antallundernull
 //     Returner en NY array, ikke endre den opprinnelige.
 function sorterStigende(tall) {
   // LØSNING
+  let sortert = [...tall];
+
+  for (let runde = 0; runde < sortert.length; runde++) {
+    for (let i = 0; i < sortert.length - 1; i++) {
+      if (sortert[i] > sortert[i + 1]) {
+        let midlertidig = sortert[i];
+        sortert[i] = sortert[i + 1];
+        sortert[i + 1] = midlertidig;
+      }
+    }
+  }
+
+  return sortert;
 }
 
 
@@ -124,6 +137,7 @@ const runder = [120, 85, 140, 95, 110];
 //     lagGamertag("Ola", 99) -> "Ola99"
 function lagGamertag(navn, tall) {
   // LØSNING
+  return `${navn}${tall}`
 }
 
 
