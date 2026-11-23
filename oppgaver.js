@@ -82,7 +82,7 @@ function antallUnderNull(tall) {
 //     Returner det største tallet i arrayen – UTEN Math.max og UTEN .sort()
 function storste(tall) {
   // LØSNING
-  let maks = 0;
+  let maks = tall[0];
   for (let i = 0; i < tall.length; i++) {
     if (tall[i] > maks) {maks = tall[i]}
   }
@@ -93,6 +93,12 @@ function storste(tall) {
 //     Den opprinnelige arrayen skal ikke endres.
 function bareKuldegrader(tall) {
   // LØSNING
+  let antallundernull = []
+  for (let i = 0; i < tall.length; i++) {
+  if (tall[i] < 0) {
+  antallundernull.push(tall[i])
+  }}
+return antallundernull
 }
 
 // Oppgave 9: Sorter tallene fra lavest til høyest – UTEN .sort().
