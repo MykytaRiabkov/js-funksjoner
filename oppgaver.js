@@ -147,7 +147,13 @@ function lagGamertag(navn, tall) {
 //     Tips: return alder >= grense;  (sammenligningen gir true/false)
 function erGammelNok(alder, grense) {
   // LØSNING
-}
+  if (alder >= grense) {
+    return true
+  }
+    else {
+      return false
+    }
+  }
 
 // Oppgave 12: BreiLAN innfører billettpriser. VG1 betaler 100 kr og resten av skolen 150 kr.
 //     Lag en funksjon som sjekker om eleven går på VG1 og gir riktig pris.
@@ -156,6 +162,12 @@ function erGammelNok(alder, grense) {
 //     Tips: bruk if og else.
 function billettpris(erVG1) {
   // LØSNING
+  if (erVG1 == true) {
+    return 100
+  }
+  else {
+    return 150
+  }
 }
 
 
