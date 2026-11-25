@@ -270,6 +270,7 @@ const resultater = [
 //     kanDelta(16, "Fortnite") -> true
 function kanDelta(alder, spill) {
   // LØSNING
+  return erGammelNok(alder, aldersgrenser[spill]);
 }
 
 
@@ -280,6 +281,11 @@ function kanDelta(alder, spill) {
 //     totalInntekt(deltakere) -> 700
 function totalInntekt(deltakere) {
   // LØSNING
+  let total = 0
+  for(let i = 0; i < deltakere.length; i++) {
+    total += billettpris(deltakere[i].vg1)
+  }
+  return total
 }
 
 
