@@ -296,10 +296,26 @@ function totalInntekt(deltakere) {
 //     UTEN .sort(). Arrayen resultater skal ikke endres.
 //     toppTre(resultater) -> ["Kari", "Jonas", "Ali"]
 function toppTre(resultater) {
-  // LØSNING
+  let sortres = [...resultater];
+
+  for (let runde = 0; runde < sortres.length; runde++) {
+    for (let i = 0; i < sortres.length - 1; i++) {
+if (sortres[i].poeng < sortres[i + 1].poeng) {
+  let midlertidig = sortres[i];
+  sortres[i] = sortres[i + 1];
+  sortres[i + 1] = midlertidig;
+      }
+    }
+  }
+
+  let toppNavn = [];
+
+  for (let i = 0; i < 3; i++) {
+    toppNavn.push(sortres[i].navn);
+  }
+
+  return toppNavn;
 }
-
-
 
 
 
@@ -308,9 +324,9 @@ function toppTre(resultater) {
 // #####################################################
 //
 // Skriv en kort egenvurdering av arbeidet ditt. Skriv rett etter kolonet.
-// Dette fikk jeg godt til:
-// Dette var vanskelig:
-// Dette vil jeg øve mer på:
+// Dette fikk jeg godt til:  Oppgavene der det ble gitt funksjoner som ligner på Python-logikk
+// Dette var vanskelig: Boblesortering (nr. 9). jeg spurte klassekameratene mine om hjelp, og etterpå ba jeg KI om å forklare logikken i koden
+// Dette vil jeg øve mer på: jeg må øve mer på logikken med objekter og arrayer
 
 
 
