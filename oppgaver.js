@@ -73,6 +73,11 @@ function antallUnderNull(tall) {
     total++
   }}
   return total;
+}// Oppgave 14: Hvor mange runder fikk laget MER enn grensen?
+//     antallOver(runder, 100) -> 3
+//     Tips: samme oppskrift som antallUnderNull() i oppgave 6.
+function antallOver(poeng, grense) {
+  // LØSNING
 }
 
 
@@ -162,7 +167,7 @@ function erGammelNok(alder, grense) {
 //     Tips: bruk if og else.
 function billettpris(erVG1) {
   // LØSNING
-  if (erVG1 == true) {
+  if (erVG1 === true) {
     return 100
   }
   else {
@@ -185,6 +190,20 @@ function billettpris(erVG1) {
 //     Tips: andel = antall i valgt fraksjon / totalt * 100
 function velgFraksjon(alliance, horde, valg) {
   // LØSNING
+  let totalt = alliance + horde;
+  let valgtAntall;
+  if (valg === "Alliance") {
+  valgtAntall = alliance
+  }
+  else {
+    valgtAntall = horde
+  }
+  if (valgtAntall > totalt / 2) {
+    return "The faction is currently unavailable on this ruleset due to population imbalance"
+  }
+  else {
+    return `Welcome to the ${valg}!`
+  }
 }
 
 // Oppgave 14: Hvor mange runder fikk laget MER enn grensen?
@@ -192,6 +211,13 @@ function velgFraksjon(alliance, horde, valg) {
 //     Tips: samme oppskrift som antallUnderNull() i oppgave 6.
 function antallOver(poeng, grense) {
   // LØSNING
+  let total = 0
+  for (let i = 0; i < poeng.length; i++) {
+    if (poeng[i] > grense) {
+      total++
+    }
+  }
+  return total
 }
 
 
